@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//rex-soft.org//REXDB DTD 1.0//EN" "http://www.rex-soft.org/dtd/rexdb-1-config.dtd">
+<configuration>
+<!--    <properties path="application.properties" />-->
+    <settings>
+<!--        <property name="lang" value="#{setting.lang}"/>-->
+        <property name="lang" value="zh-cn"/>
+        <property name="nolog" value="false" />
+        <property name="reflectCache" value="true" />
+        <property name="dynamicClass" value="true" />
+    </settings>
+    <dataSource>
+        <property name="driverClassName" value="com.mysql.cj.jdbc.Driver" />
+<!--        配置时间标准 serverTimezone=GMT%2b8 以东八区的时间为准-->
+        <property name="url" value="jdbc:mysql://172.31.102.207:3306/misas?useUnicode=true&amp;serverTimezone=GMT%2b8&amp;characterEncoding=UTF-8" />
+<!--        <property name="url" value="jdbc:mysql://cupb.top:3306/print?useUnicode=true;serverTimezone=GMT%2b8;characterEncoding=UTF-8" />-->
+        <!-- 如果用户名不可以空，可以设置为 root 密码可以注释 -->
+        <property name="username" value="misas" />
+        <property name="password" value="JdMm,ncbd.9876.." />
+    </dataSource>
+    <listener class="org.rex.db.listener.impl.SqlDebugListener">
+<!--        <property name="simple" value="true"/>-->
+        <property name="level" value="trace"/>
+    </listener>
+</configuration>
